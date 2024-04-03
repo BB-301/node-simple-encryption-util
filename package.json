@@ -1,0 +1,50 @@
+{
+    "name": "@bb301/simple-encryption-util",
+    "version": "1.0.0",
+    "description": "A simple Node.js library (written in TypeScript) and accompanying CLI tool for encrypting and decrypting data using the AES-256 CBC algorithm.",
+    "bin": {
+        "prompt-encrypt": "./dist/commands/prompt-encrypt.js"
+    },
+    "main": "./dist/lib.js",
+    "types": "./dist/lib.d.ts",
+    "scripts": {
+        "build": "npx tsc -p .",
+        "install-cli": "npm run build && npm install -g",
+        "pack": "npm run build && npm pack",
+        "test": "npx ts-node src/test.ts",
+        "example-2": "npx ts-node src/examples/example-2.ts",
+        "example-3": "npx ts-node src/examples/example-3.ts",
+        "docs-website": "npx typedoc --out ../node-simple-encryption-util-docs/docs ./src/lib.ts",
+        "docs": "npx typedoc --out ./dist/docs ./src/lib.ts"
+    },
+    "keywords": [
+        "encryption",
+        "AES-256-CBC"
+    ],
+    "author": "BB-301 <fw3dg3@gmail.com> (https://github.com/BB-301)",
+    "license": "MIT",
+    "homepage": "https://github.com/BB-301/node-simple-encryption-util",
+    "repository": {
+        "url": "https://github.com/BB-301/node-simple-encryption-util",
+        "type": "git"
+    },
+    "bugs": {
+        "email": "fw3dg3@gmail.com",
+        "url": "https://github.com/BB-301/node-simple-encryption-util/issues"
+    },
+    "files": [
+        "./dist/commands/prompt-encrypt.js",
+        "./dist/lib.js",
+        "./dist/lib.d.ts"
+    ],
+    "devDependencies": {
+        "@types/node": "^20.11.30",
+        "@types/read": "^0.0.32",
+        "ts-node": "^10.9.2",
+        "typedoc": "^0.25.12",
+        "typescript": "^5.4.3"
+    },
+    "dependencies": {
+        "read": "^3.0.1"
+    }
+}
